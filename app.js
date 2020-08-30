@@ -1,7 +1,9 @@
+//imports
 import express from 'express';
 import mongoose from 'mongoose';
 import { accountRouter } from './routes/accountRouter.js';
 
+//Conexão com o mongoDB
 mongoose
   .connect(
     'mongodb+srv://cristianoalazaro:clazaro@cluster0.f1162.azure.mongodb.net/my-bank?retryWrites=true&w=majority',
