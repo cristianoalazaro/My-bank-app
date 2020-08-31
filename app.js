@@ -21,7 +21,7 @@ mongoose
     console.log('Erro ao conectar com o mongoDB: ' + err);
   });
 
-app.put('/student/:id', async(((req, res) = {})));
+//app.put('/student/:id', async(((req, res) = {})));
 
 const app = express();
 app.use(express.json());
