@@ -3,10 +3,12 @@ import express from 'express';
 import mongoose from 'mongoose';
 import { accountRouter } from './routes/accountRouter.js';
 
+require('dotenv').config();
+
 //Conexão com o mongoDB
 mongoose
   .connect(
-    'mongodb+srv://cristianoalazaro:clazaro@cluster0.f1162.azure.mongodb.net/my-bank?retryWrites=true&w=majority',
+    `mongodb+srv://${process.env.DBUSER}:${process.env.DBPWD}'@cluster0.f1162.azure.mongodb.net/my-bank?retryWrites=true&w=majority`,
     {
       useNewUrlParser: true,
       useUnifiedTopology: true,
@@ -25,6 +27,6 @@ const app = express();
 app.use(express.json());
 app.use(accountRouter);
 
-app.listen(3000, () => {
+app.listen(process.env.PORT, () => {
   console.log('API iniciada!');
 });
