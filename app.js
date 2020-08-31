@@ -21,11 +21,8 @@ mongoose
     console.log('Erro ao conectar com o mongoDB: ' + err);
   });
 
-<<<<<<< HEAD
 app.put('/student/:id', async(((req, res) = {})));
 
-=======
->>>>>>> 962dc0074817d49b81bf6161aaac1e635a742fd5
 const app = express();
 app.use(express.json());
 app.use(accountRouter);
